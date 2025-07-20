@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Bookmark } from 'lucide-react';
 import products from '../Data/Product';
+import Loading from './Loding';
 
 function Main() {
  
@@ -44,6 +45,9 @@ function Main() {
       }
     });
   };
+
+
+ 
 
   return (
     <div className="p-4 md:p-6 container mx-auto max-w-7xl">
