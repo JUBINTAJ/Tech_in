@@ -1,197 +1,42 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
 
-const Loader = () => {
-  return (
-    <StyledWrapper>
-      <div className="loader-content">
-        
-        <img src="/assets/logo.jpg" alt="Your Logo" className="logo" />
+export default function Loading() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+      <div className="text-center">
+        {/* Logo Container */}
+        <div className="mb-8">
+          {/* Replace this div with your actual logo image */}
+          <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center animate-pulse">
+            <span className="text-white text-2xl font-bold">LOGO</span>
+          </div>
+    
+           <img 
+            src="/path-to-your-logo.png" 
+            alt="Company Logo" 
+            className="w-24 h-24 mx-auto mb-4 animate-pulse"
+          />
+        </div>
 
-        <div className="boxes">
-          <div className="box">
-            <div />
-            <div />
-            <div />
-            <div />
-          </div>
-          <div className="box">
-            <div />
-            <div />
-            <div />
-            <div />
-          </div>
-          <div className="box">
-            <div />
-            <div />
-            <div />
-            <div />
-          </div>
-          <div className="box">
-            <div />
-            <div />
-            <div />
-            <div />
-          </div>
-        </div>
-      </div>
-    </StyledWrapper>
-  );
-};
+        {/* Loading Animation */}
+        <div className="flex justify-center mb-6">
+          <div className="flex space-x-2">
+            <div className="w-3 h-3 bg-blue-500 rounded-full animate-bounce"></div>
+            <div className="w-3 h-3 bg-blue-500 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
+            <div className="w-3 h-3 bg-blue-500 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
+          </div>
+        </div>
 
-
-const StyledWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: #f4f6fc;
-  overflow: hidden;
-
-  .loader-content {
-    text-align: center;
-  }
-
-  .logo {
-    width: 120px;
-    margin-bottom: 1.5rem;
-    animation: pulse 1.8s infinite ease-in-out;
-  }
-
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    50% {
-      transform: scale(1.05);
-      opacity: 0.7;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-
-  /* Your existing box animation styles go here 👇 */
-  .boxes {
-    --size: 32px;
-    --duration: 800ms;
-    height: calc(var(--size) * 2);
-    width: calc(var(--size) * 3);
-    position: relative;
-    transform-style: preserve-3d;
-    transform-origin: 50% 50%;
-    transform: rotateX(60deg) rotateZ(45deg);
-    margin: 0 auto;
-  }
-
-  .boxes .box {
-    width: var(--size);
-    height: var(--size);
-    position: absolute;
-    transform-style: preserve-3d;
-  }
-
-  .boxes .box:nth-child(1) {
-    transform: translate(100%, 0);
-    animation: box1 var(--duration) linear infinite;
-  }
-
-  .boxes .box:nth-child(2) {
-    transform: translate(0, 100%);
-    animation: box2 var(--duration) linear infinite;
-  }
-
-  .boxes .box:nth-child(3) {
-    transform: translate(100%, 100%);
-    animation: box3 var(--duration) linear infinite;
-  }
-
-  .boxes .box:nth-child(4) {
-    transform: translate(200%, 0);
-    animation: box4 var(--duration) linear infinite;
-  }
-
-  .boxes .box > div {
-    --background: #5c8df6;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: var(--background);
-    transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));
-  }
-
-  .boxes .box > div:nth-child(1) {
-    top: 0;
-    left: 0;
-    --rotateY: 0deg;
-    --rotateX: 0deg;
-    --translateZ: calc(var(--size) / 2);
-  }
-
-  .boxes .box > div:nth-child(2) {
-    right: 0;
-    --background: #145af2;
-    --rotateY: 90deg;
-    --translateZ: calc(var(--size) / 2);
-  }
-
-  .boxes .box > div:nth-child(3) {
-    --background: #447cf5;
-    --rotateX: -90deg;
-    --translateZ: calc(var(--size) / 2);
-  }
-
-  .boxes .box > div:nth-child(4) {
-    top: 0;
-    left: 0;
-    --background: #dbe3f4;
-    --translateZ: calc(var(--size) * 3 * -1);
-  }
-
-  @keyframes box1 {
-    0%, 50% {
-      transform: translate(100%, 0);
-    }
-    100% {
-      transform: translate(200%, 0);
-    }
-  }
-
-  @keyframes box2 {
-    0% {
-      transform: translate(0, 100%);
-    }
-    50% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(100%, 0);
-    }
-  }
-
-  @keyframes box3 {
-    0%, 50% {
-      transform: translate(100%, 100%);
-    }
-    100% {
-      transform: translate(0, 100%);
-    }
-  }
-
-  @keyframes box4 {
-    0% {
-      transform: translate(200%, 0);
-    }
-    50% {
-      transform: translate(200%, 100%);
-    }
-    100% {
-      transform: translate(100%, 100%);
-    }
-  }
-`;
-
-export default Loader;
+        {/* Loading Text */}
+        <p className="text-gray-600 text-lg font-medium">Loading...</p>
+        
+        {/* Progress Bar (Optional) */}
+        <div className="mt-6 w-64 mx-auto">
+          <div className="w-full bg-gray-200 rounded-full h-2">
+            <div className="bg-blue-500 h-2 rounded-full animate-pulse" style={{width: '60%'}}></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
