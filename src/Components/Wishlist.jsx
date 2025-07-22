@@ -13,6 +13,21 @@ function Wishlist() {
     });
   };
 
+
+
+
+    const [selectedImage, setSelectedImage] = useState(null);
+  
+   
+    const openModal = (imgSrc) => {
+      setSelectedImage(imgSrc);
+    };
+  
+    
+    const closeModal = () => {
+      setSelectedImage(null);
+    };
+
   return (
     <div className="p-4 md:p-6 container mx-auto max-w-7xl ">
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
@@ -31,6 +46,7 @@ function Wishlist() {
                   alt={product?.alt || 'Product image'}
                   className="w-full h-full object-cover rounded-t-xl"
                   loading="lazy"
+                    onClick={() => openModal(product.img)} 
                 />
               </div>
 
@@ -52,6 +68,31 @@ function Wishlist() {
           ))
         )}
       </div>
+
+
+
+
+            {selectedImage && (
+        <div 
+          className="fixed inset-0 bg-black/80 bg-opacity-70 flex items-center justify-center z-50"
+          onClick={closeModal}  
+        >
+          <div className="relative max-w-4xl w-full p-4">
+            <img
+              src={selectedImage}
+              alt="Full size product"
+              className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+            />
+            {/* <button
+              className="absolute top-2 right-2 text-white bg-gray-800 rounded-full p-2"
+              onClick={closeModal}
+              aria-label="Close modal"
+            >
+              ✕
+            </button> */}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
