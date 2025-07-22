@@ -5,11 +5,8 @@ import logo from '../assets/logo.jpg';
 
 function Header() {
   const customers = [
-    "1500+ Happy Customers",
-    "Affordable Pricing",
-    "24/7 Customer Support",
-    "Trusted by Thousands",
-    "Fast Delivery",
+    "2000+ Happy Customers",
+    "Delivery all over india"
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

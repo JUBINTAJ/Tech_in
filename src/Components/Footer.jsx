@@ -11,7 +11,7 @@ function Footer() {
             <img src={logo} alt="Logo" className="w-44 mx-auto md:mx-0 mb-2" />
           </div>
           <div className="text-center text-sm xl:mr-10 text-gray-300">
-            No Cash on Delivery. Pay via Card, UPI, or Net Banking.
+            No Cash on Delivery. UPI  , Bank Transfer.
           </div>
           <div className="flex flex-col items-center md:items-start space-y-3">
             <a
