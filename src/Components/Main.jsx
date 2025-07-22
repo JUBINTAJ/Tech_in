@@ -178,7 +178,7 @@ function Main() {
 
             <div className="p-4 flex-grow flex flex-col items-start justify-between bg-gray-50 rounded-b-xl text-left">
               <div className="w-full flex items-center justify-between">
-                <h3 className="text-base font-semibold text-black line-clamp-2">{product.name}</h3>
+                <h3 className="text-base font-semibold text-black line-clamp-2">{product.name || "Number Plate"}</h3>
                 <button
                   className="p-2 transition hover:scale-105 active:scale-95"
                   aria-label={savedStates[idx] ? 'Unsave product' : 'Save product'}
@@ -189,7 +189,12 @@ function Main() {
                   />
                 </button> 
               </div>
-              <p className="text-red-600 font-bold text-lg mt-2">{product.price}</p>
+       <div className="flex items-center gap-2">
+    <del className="text-[#565959] font-medium text-sm mt-2">
+      <span className="text-sm"> </span>{product.offer}
+    </del>
+    <p className="text-red-600 font-bold text-lg mt-2">{product.price}</p>
+  </div>
               <p className="text-sm text-gray-500 mt-1">{product.size}</p>
             </div>
           </div>
