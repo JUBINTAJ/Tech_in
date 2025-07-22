@@ -52,7 +52,7 @@ function Wishlist() {
 
               <div className="p-4 flex-grow flex flex-col items-start justify-between bg-gray-50 rounded-b-xl text-left">
                 <div className="w-full flex items-center justify-between">
-                  <h3 className="text-base font-semibold text-black line-clamp-2">{product?.name || 'Unknown Product'}</h3>
+                  <h3 className="text-base font-semibold text-black line-clamp-2">{product?.name  }</h3>
                   <button
                     className="p-2 transition hover:scale-105 active:scale-95"
                     aria-label="Unsave product"
@@ -61,8 +61,8 @@ function Wishlist() {
                     <Bookmark className="w-5 h-5 text-black fill-current" />
                   </button>
                 </div>
-                <p className="text-red-600 font-bold text-lg mt-2">{product?.price || 'N/A'}</p>
-                <p className="text-sm text-gray-500 mt-1">{product?.size || 'N/A'}</p>
+                <p className="text-red-600 font-bold text-lg mt-2">{product?.price    }</p>
+                <p className="text-sm text-gray-500 mt-1">{product?.size   }</p>
               </div>
             </div>
           ))

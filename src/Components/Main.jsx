@@ -206,10 +206,10 @@ function Main() {
             <img
               src={selectedImage}
               alt="Full size product"
-              className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
+              className="w-full h-auto max-h-[80vh] object-contain   rounded-lg"
             />
             {/* <button
-              className="absolute top-2 right-2 text-white bg-gray-800 rounded-full p-2"
+              className="absolute top-2 right-2  text-white  rounded-full p-2"
               onClick={closeModal}
               aria-label="Close modal"
             >
