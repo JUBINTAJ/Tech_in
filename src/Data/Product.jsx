@@ -74,7 +74,7 @@ const products = [
   { id: 32, img: sampleImage32, alt: "Sample 32", price: "₹1050", offer: "₹1200", name: 'F1 plate' },
   { id: 33, img: sampleImage33, alt: "Sample 33", price: "₹1200", offer: "₹1400", name: 'F1 plate' },
   { id: 34, img: sampleImage34, alt: "Sample 34", price: "₹999", offer: "₹1100", name: 'Traffic plate' },
-  { id: 35, img: sampleImage35, alt: "Sample 35", price: "₹549", offer: "₹1200", name: 'Traffic plate' },
+  { id: 35, img: sampleImage35, alt: "Sample 35", price: "₹999", offer: "₹1100", name: 'Traffic plate' },
 ];
 
 export default products;
