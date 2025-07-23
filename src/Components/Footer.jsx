@@ -23,7 +23,7 @@ function Footer() {
               <FaInstagram /> Instagram
             </a>
             <a
-              href="https://wa.me/6238383789"
+              href="https://wa.me/+916238383789"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm hover:text-green-500"
@@ -42,22 +42,30 @@ function Footer() {
           © {new Date().getFullYear()} In_Tech_in All rights reserved.
         </div>
       </footer>
-      <div className="fixed bottom-4 right-4 flex flex-col space-y-3 z-50">
-        <a
-          href="https://www.instagram.com/in_tech_in?igsh=MTl2cWVpdjk5N2Nydw=="
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-pink-500 hover:bg-pink-600 text-white p-3 rounded-full shadow-lg transition-colors duration-300"
-        >
-          <FaInstagram size={20} />
-        </a>
-        <a
-          href="tel:+916238383789"
-          className="bg-green-600 hover:bg-green-500 text-white p-3 rounded-full shadow-lg transition-colors duration-300"
-        >
-          <FaPhone size={20} />
-        </a>
-      </div>
+    <div className="fixed bottom-4 right-4 flex flex-col space-y-3 z-50">
+  <a
+    href="https://www.instagram.com/in_tech_in?igsh=MTl2cWVpdjk5N2Nydw=="
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-pink-500 hover:bg-pink-600 text-white p-3 rounded-full shadow-lg transition-colors duration-300"
+  >
+    <FaInstagram size={20} />
+  </a>
+  <a
+    href="https://wa.me/+916238383789"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-green-600 hover:bg-green-500 text-white p-3 rounded-full shadow-lg transition-colors duration-300"
+  >
+    <FaWhatsapp size={20} />
+  </a>
+  <a
+    href="tel:+916238383789"
+    className="bg-green-600 hover:bg-green-500 text-white p-3 rounded-full shadow-lg transition-colors duration-300"
+  >
+    <FaPhone size={20} />
+  </a>
+</div>
     </>
   );
 }
